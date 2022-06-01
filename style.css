@@ -1,0 +1,167 @@
+html{
+    height:100% ;}
+body{
+    background-color: #293462;
+}
+
+    .img__p{
+        display: flex;
+        justify-content: center;    
+       height: 200px;
+        animation-name: imagenP;
+        animation-duration: 3s;
+        animation-delay: 1s;
+
+    }
+    @keyframes imagenP{
+        from{
+            transform: scale(0.5);
+        }
+        to{
+            transform: scale(1.5);
+            
+        }
+    }
+
+
+    .grid-container{
+        text-align: center;
+        display: grid;
+        gap: 5px;
+        min: height 100%; 
+        padding: 10px;
+        grid-template-areas: 
+       "header"
+       "navbar"
+       "main"      
+       "footer" ;
+    }
+.header{
+    grid-area: header;
+      
+}
+
+.navbar{
+    grid-area: navbar;
+    background-color: #F24C4C;   
+font-size: 18px; 
+animation-name: navP;
+animation-duration: 2s;
+animation-direction: reverse;        
+}
+@keyframes navP {
+    from {
+      margin-left:100%;
+      width:300%
+    }
+  
+    to {
+     margin-left:0%;
+     width:100%;
+   }
+  }
+
+
+
+.navbar ul{
+   list-style: none;
+   list-style-type: none;
+   display: flex;
+   justify-content: space-around  
+
+}
+
+.main{
+    grid-area: main;
+    background-color: #EC9B3B;
+}
+.footer{
+    grid-area: footer;
+    background-color: #F7D716;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/*aca empieza estilos a servicio*/
+
+.serv__container{
+    display: grid;
+    min-height: 100%;
+    grid-template-areas:
+     "navbar" 
+     "titulo"
+     "servicios"
+     "contacto"
+    ;
+}
+
+.navbar__serv{
+    grid-area: navbar;
+    background-color: #F24C4C;   
+    font-size: 18px; 
+}
+.navbar__serv ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around 
+}
+.titu{
+    grid-area: titulo;
+    text-align: center;
+}
+
+.servx{
+    grid-area: servicios;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+.servx li{
+    margin: 10px;
+    border-style: dashed;
+ 
+}
+
+.probando{
+    grid-area: contacto;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 900px) {
+
+    .grid-container{
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "header header header"
+    "main main main"
+    "footer footer footer"
+    ;
+
+}
+
+@media (min-width: 900px){
+
+    .serv__container{
+        grid-template-areas: 
+        "titulo titulo titulo"
+        "navbar navbar navbar"
+        "servicios servicios servicios"
+        "contacto contacto contacto"
+        
+        
+        ;
+    }
+}
+
+
+}
